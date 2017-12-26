@@ -23,7 +23,11 @@
         <tr>
         <td>{{ art.title }}</td>
         <td>{{ art.content }}</td>
-        <td>{{ art.labels.all.all }}</td>
+        <td>{% for label in art.labels.all %}
+            {{ label.label }}
+            {% endfor %}
+
+        </td>
         <td>{{ art.date }}</td>
         <td>{{ art.like }}</td>
         <td>{{ art.reading }}</td>

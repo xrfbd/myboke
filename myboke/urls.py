@@ -18,6 +18,9 @@ from django.contrib import admin
 from boke import views
 urlpatterns = [
     #url(r'^&', views.article_list),
-    url(r'^new_article/$', views.edit_article),
-    url(r'^article_list/$', views.article_list),
+    url(r'^newarticle/$', views.edit_article),
+    url(r'^articlelist/$', views.article_list,name='articlelist'),
+    url(r'^login/$', views.login),
+    url(r'^index/$', views.index),
+    url(r'^logout/$', views.logout),
 ]
